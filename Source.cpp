@@ -11,7 +11,8 @@ private:
 	vector <vector<int>> v; //domyslnie uzycie v[wiersze][kolumny]
 
 public:
-	Matrix(int width, int height) {
+	Matrix(int height, int width) 
+	{
 		this->width = width;
 		this->height = height;
 		v.resize(height); //rozszerzam "1 kolumne" na podana liczbe wierszy
@@ -19,8 +20,6 @@ public:
 		{
 			v[i].resize(width); //rozrzeszam kazdy wiersz do podanej wartosci
 		}
-		
-
 	}
 	void insert_value(int row, int column, int value) //brak implementacji
 	{
@@ -65,9 +64,15 @@ public:
 
 int main()
 {
-	Matrix m(5,3);
-	m.auto_insert_values();
-	m.print_matrix();
+	Matrix m1(5,3);
+	m1.auto_insert_values();
+	m1.print_matrix();
+
+	cout << endl;
+
+	Matrix m2(5, 3);
+	m2.auto_insert_values();
+	m2.print_matrix();
 
 
 	return 0;
